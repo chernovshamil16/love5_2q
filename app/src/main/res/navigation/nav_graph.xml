@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loveFragment">
+
+    <fragment
+        android:id="@+id/loveFragment"
+        android:name="com.example.love5_2.fragment.LoveFragment"
+        android:label="fragment_love"
+        tools:layout="@layout/fragment_love" >
+        <action
+            android:id="@+id/action_loveFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+        <action
+            android:id="@+id/action_loveFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_enter_anim"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.love5_2.fragment.SecondFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/second_blank" />
+    <fragment
+        android:id="@+id/boardFragment2"
+        android:name="com.example.love5_2.fragment.BoardFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_board" >
+        <action
+            android:id="@+id/action_boardFragment2_to_loveFragment"
+            app:destination="@id/loveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.love5_2.core.BaseFragment"
+        android:label="BaseFragment" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.love5_2.fragment.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_loveFragment"
+            app:destination="@id/loveFragment" />
+    </fragment>
+</navigation>
